@@ -1,0 +1,31 @@
+{
+  "name": "vue-webpack-todo",
+  "version": "1.0.0",
+  "description": "imooc free course about VUE.JS &amp; webpack",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaisa911/vue-webpack-todo.git"
+  },
+  "author": "paji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaisa911/vue-webpack-todo/issues"
+  },
+  "homepage": "https://github.com/kaisa911/vue-webpack-todo#readme",
+  "dependencies": {
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "vue": "^2.6.10",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  }
+}
