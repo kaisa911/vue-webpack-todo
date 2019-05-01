@@ -16,7 +16,6 @@ export default {
   },
   methods: {
     deleteTodo() {
-      console.log(this.todo.id);
       this.$emit("del", this.todo.id);
     }
   }
