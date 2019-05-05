@@ -2,7 +2,7 @@
   <div :class="['todo-item', todo.completed ? 'completed' : '']">
     <input type="checkbox" class="toggle" v-model="todo.completed">
     <label :class="['todo-content', todo.completed ? 'completed' : '']">{{todo.content}}</label>
-    <button class="destory" @click="deleteTodo">删除</button>
+    <button class="destory" @click="$emit('del', todo.id)">删除</button>
   </div>
 </template>
 
@@ -14,12 +14,7 @@ export default {
       required: true
     }
   },
-  methods: {
-    // 删除todo
-    deleteTodo() {
-      this.$emit("del", this.todo.id);
-    }
-  }
+  methods: {}
 };
 </script>
 

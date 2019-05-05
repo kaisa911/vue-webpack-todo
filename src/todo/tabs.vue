@@ -6,10 +6,10 @@
         v-for="(state,index) in status"
         :key="`${state}+${index}`"
         :class="['state', filter===state ? 'active' : '']"
-        @click="toggleFilter(state)"
+        @click="$emit('toggleState', state)"
       >{{state}}</span>
     </span>
-    <span class="clear" @click="clearAllCompleted">Clear Completed</span>
+    <span class="clear" @click="$emit('deleteCompleted')">Clear Completed</span>
   </div>
 </template>
 
@@ -31,17 +31,7 @@ export default {
     };
   },
 
-  methods: {
-    // 删除所有已完成的todos
-    clearAllCompleted() {
-      this.$emit("deleteCompleted");
-    },
-    // 交换选中的状态
-    toggleFilter(state) {
-      console.log(state);
-      this.$emit("toggleState", state);
-    }
-  }
+  methods: {}
 };
 </script>
 
