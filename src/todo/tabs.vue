@@ -27,14 +27,16 @@ export default {
   },
   data() {
     return {
-      status: ["all", "active", "completed"]
+      status: ["all", "active", "completed"] // 状态
     };
   },
 
   methods: {
+    // 删除所有已完成的todos
     clearAllCompleted() {
       this.$emit("deleteCompleted");
     },
+    // 交换选中的状态
     toggleFilter(state) {
       console.log(state);
       this.$emit("toggleState", state);

@@ -30,6 +30,7 @@ export default {
     };
   },
   methods: {
+    // 添加todo
     addTodo(e) {
       this.todos.unshift({
         id: this.todos.length,
@@ -38,13 +39,16 @@ export default {
       });
       e.target.value = "";
     },
+    // 删除todo
     deleteTodo(id) {
       console.log(id);
       this.todos = this.todos.filter(item => item.id !== id);
     },
+    // 替换状态
     toggleState(state) {
       this.filter = state;
     },
+    // 删除所有已完成的todos
     deleteCompleted() {
       this.todos = this.todos.filter(item => item.completed === false);
     }
@@ -54,9 +58,11 @@ export default {
     Tabs
   },
   computed: {
+    // 计算剩余的未完成的todos的数量
     todoLeft() {
       return this.todos.filter(item => item.completed === false).length;
     },
+    // 根据状态计算todos的李彪
     filteredTodos() {
       if (this.filter === "all") {
         return this.todos;
