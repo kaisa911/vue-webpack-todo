@@ -1,7 +1,7 @@
 import '../assets/style/footer.styl';
 
 const Footer = {
-  data() {
+  data: () => {
     return {
       author: 'paji'
     };
