@@ -3,7 +3,7 @@
     <!-- <div id="cover"></div> -->
     <!-- <Header/> -->
     <!-- <Todo/> -->
-    <Swiper/>
+    <Login/>
     <!-- <div style="display:flex">
       <Scroll :aaa="changeSA" @resetA="resetA"/>
       <Scroll2 :aaa="changeSA" @resetA="resetA"/>
@@ -17,13 +17,14 @@
 import Header from "./todo/header.vue";
 import Footer from "./todo/footer.jsx";
 import Todo from "./todo/todo.vue";
-import Swiper from "./todo/swiper/index.vue";
+// import Swiper from "./todo/swiper/index.vue";
+import Login from "./login/login.vue";
 export default {
   components: {
     Header,
     Footer,
     Todo,
-    Swiper
+    Login
   },
   data: () => ({
     aaa: false
